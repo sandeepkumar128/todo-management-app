@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <h2> Welcome {{name}} :) </h2>
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        You can manage your todos <a routerLink="/todos">here</a>
+    </div>
+    <div class = "container">
+        Get customized message from Backend Service >>
+        <button (click) = "getWelcomeMessageWithParam()" class ="btn btn-success" >Get Welcome Message</button>
+    </div>
+    <div class = "container" *ngIf = "welcomeMsgFromService">
+     <h2> {{welcomeMsgFromService}}</h2>
+    </div>
+</div>
